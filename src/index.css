@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: #17181b;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+/* Hazard-stripe divider used sparingly as the one bold structural motif */
+.stripe-divider {
+  height: 10px;
+  background: repeating-linear-gradient(
+    -45deg,
+    #f5b700,
+    #f5b700 18px,
+    #17181b 18px,
+    #17181b 36px
+  );
+}
+
+.focus-ring:focus-visible {
+  outline: 3px solid #f5b700;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
